@@ -1,0 +1,7 @@
+(kicad_sch (version 20230121) (generator "codex")
+  (paper "A4")
+  (title_block (title "STM8L051F3P6 IRLML2502 CR2032 NEC Remote - Skeleton"))
+  (text "Top-level skeleton only. Continue editing in KiCad." (at 50 40 0) (effects (font (size 1.27 1.27))))
+  (text "Active default: STM8L051F3P6 MCU + IRLML2502 NMOS" (at 50 50 0) (effects (font (size 1.27 1.27))))
+  (text "Blocks: MCU+Keys+SWIM/NRST/VDD/GND TP, Power+IR Driver" (at 50 60 0) (effects (font (size 1.27 1.27))))
+)

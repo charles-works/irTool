@@ -1,0 +1,17 @@
+# PlatformIO
+firmware/.pio/
+firmware/.sconsign.dblite
+
+# OMX workflow/runtime artifacts
+.omx/
+
+# Python venv used for local tooling
+.venv-pio/
+
+# VSCode workspace cache
+.vscode/*.log
+
+# KiCad backups
+*.kicad_prl
+*.bak
+*-backups/

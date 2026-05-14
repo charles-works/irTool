@@ -1,0 +1,22 @@
+{
+  "build": {
+    "cpu": "stm8",
+    "mcu": "stm8l051f3p6",
+    "f_cpu": "16000000L",
+    "extra_flags": "-DSTM8L051F3P6 -DSTM8L051 -DSTM8L05X"
+  },
+  "debug": {
+    "svd_path": "STM8L15x.svd",
+    "openocd_target": "stm8s"
+  },
+  "upload": {
+    "maximum_ram_size": 1024,
+    "maximum_size": 8192,
+    "protocol": "stlinkv2",
+    "protocols": ["stlinkv2"]
+  },
+  "frameworks": [],
+  "name": "STM8L051F3P6 custom board",
+  "url": "https://www.st.com/",
+  "vendor": "STMicroelectronics"
+}

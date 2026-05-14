@@ -1,0 +1,6 @@
+(kicad_sch (version 20230121) (generator "codex")
+  (paper "A4")
+  (title_block (title "Power and IR Driver Skeleton"))
+  (text "CR2032+ -> R_LED -> IR LED -> IRLML2502 drain; source -> GND" (at 40 40 0) (effects (font (size 1.27 1.27))))
+  (text "MCU IR/GPIO -> 100 ohm -> IRLML2502 gate; 1M gate pulldown to GND" (at 40 50 0) (effects (font (size 1.27 1.27))))
+)

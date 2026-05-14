@@ -1,0 +1,12 @@
+{
+  "board": {"design_settings": {}, "layer_presets": []},
+  "boards": [],
+  "cvpcb": {},
+  "libraries": {},
+  "meta": {"filename": "remote.kicad_pro", "version": 1},
+  "net_settings": {},
+  "pcbnew": {},
+  "schematic": {"legacy_lib_dir": "", "net_format_name": "", "ngspice": {}, "page_layout_descr_file": ""},
+  "sheets": [],
+  "text_variables": {}
+}

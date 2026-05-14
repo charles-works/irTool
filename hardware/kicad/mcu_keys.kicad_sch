@@ -1,0 +1,6 @@
+(kicad_sch (version 20230121) (generator "codex")
+  (paper "A4")
+  (title_block (title "MCU and Keys Skeleton"))
+  (text "Active MCU: STM8L051F3P6; IR/GPIO to gate resistor; KEY1/KEY2/KEY3" (at 35 40 0) (effects (font (size 1.27 1.27))))
+  (text "Expose test/debug points: SWIM, NRST, VDD, GND" (at 35 50 0) (effects (font (size 1.27 1.27))))
+)
