@@ -19,6 +19,7 @@ STM8L001 references in older project material are legacy/background context only
 - The IRLML2502 drain is in the IR LED cathode return path.
 - The IRLML2502 source connects to `GND`.
 - Bring-up/debug access exposes `SWIM`, `NRST`, `VDD`, and `GND` test points.
+- The legal TSSOP-20 pin map for this pass is: PA0=IR, PB0=KEY1, PB1=KEY2, PD0=KEY3, PC1=strap/spare.
 
 ## Scope boundaries
 
@@ -66,6 +67,17 @@ This BOM is for schematic review and bring-up planning only. It is not a product
 - Active register shim: `firmware/include/stm8l_regs.h`; old target-specific `stm8l001_stub.h` is not an active include.
 - NEC constants remain `0x80`, `0x7F`, `0xC0`, `0x40`, and `0x60`.
 - Bit-bang NEC timing is compile-first only and must be scope/receiver verified.
+
+## STM8L051F3P6 legal pin map for this first pass
+
+| Function | Port/pin macro | TSSOP-20 pin | Notes |
+|---|---|---:|---|
+| IR output | `GPIOA, 0` | 3 | PA0/SWIM/BEEP/IR_TIM; kept as the IR candidate.
+| Reset / debug | `NRST/PA1` | 4 | Reserved for reset/debug recovery.
+| Key 1 | `GPIOB, 0` | 10 | Active-low input with pull-up.
+| Key 2 | `GPIOB, 1` | 11 | Active-low input with pull-up.
+| Key 3 | `GPIOD, 0` | 9 | Active-low input with pull-up.
+| Debug strap / spare | `GPIOC, 1` | 19 | Optional strap or spare, not required for the first pass.
 
 ## Datasheet and validation facts
 

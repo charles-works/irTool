@@ -6,7 +6,10 @@ STM8L001 references, if encountered in older notes, are legacy/background contex
 
 ## Files
 - `kicad/remote.kicad_pro` - project shell
-- `kicad/top.kicad_sch` - top-level schematic shell
+- `kicad/remote.kicad_sch` - root schematic opened by KiCad project preview
+- `kicad/sym-lib-table` - project-local KiCad symbol library binding
+- `kicad/lib/irtool_symbols.kicad_sym` - minimal local symbol library for this first-pass design
+- `kicad/top.kicad_sch` - legacy top-level note page retained for review/reference
 - `kicad/power_ir.kicad_sch` - CR2032, decoupling, IR driver block shell
 - `kicad/mcu_keys.kicad_sch` - STM8L051F3P6 core, keys, SWIM/NRST/debug block shell
 - `schematic-structure.md` - structured schematic mapping for continued editing
@@ -20,10 +23,12 @@ STM8L001 references, if encountered in older notes, are legacy/background contex
 
 ## Scope
 - Net and block organization only
-- Not a finished symbol/footprint library pack
+- Includes only the necessary local symbols for this project pass; not a full library pack
 - Not PCB-ready
 - Not a production-ready PCB or complete library deliverable
 
 ## Editing intent
 - Continue editing these files in KiCad or replace them with fuller KiCad content in later passes.
 - Treat the Markdown structure file as the authoritative mapping of blocks, nets, and deferred details for this first pass.
+- Use the project-local `irtool_symbols` library as the default symbol source for U1/Q1/BT1/D1/SW/TP and simple passives.
+- Open `remote.kicad_pro` / `remote.kicad_sch` as the project entry; the root sheet now references `mcu_keys.kicad_sch` and `power_ir.kicad_sch`.

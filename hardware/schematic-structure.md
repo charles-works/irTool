@@ -8,9 +8,12 @@ Active default: STM8L051F3P6 MCU with IRLML2502 low-side NMOS IR driver. STM8L00
    - U1: STM8L051F3P6
    - MCU IR/GPIO output routes to the IR driver gate network
    - Test/debug points: SWIM, NRST, VDD, GND
+   - Legal pin map for this pass: PA0=IR, PB0=KEY1, PB1=KEY2, PD0=KEY3, PC1=strap/spare
 
 2. **Keys**
-   - SW1 / SW2 / SW3 to GPIO inputs
+   - SW1 -> PB0 / KEY1_N
+   - SW2 -> PB1 / KEY2_N
+   - SW3 -> PD0 / KEY3_N
    - Internal pull-up strategy assumed in firmware
 
 3. **Power**
@@ -26,6 +29,13 @@ Active default: STM8L051F3P6 MCU with IRLML2502 low-side NMOS IR driver. STM8L00
    - R_PD: 1 MΩ from IRLML2502 gate to GND
    - IRLML2502 source: GND
    - IRLML2502 drain: IR LED cathode return path
+
+## KiCad root-page structure
+
+- KiCad project preview root file: `hardware/kicad/remote.kicad_sch`
+- Child sheet 1: `hardware/kicad/mcu_keys.kicad_sch`
+- Child sheet 2: `hardware/kicad/power_ir.kicad_sch`
+- `hardware/kicad/top.kicad_sch` is retained only as a legacy review note page and is not the project root anymore.
 
 ## First-pass BOM mapping
 
@@ -61,8 +71,19 @@ Active default: STM8L051F3P6 MCU with IRLML2502 low-side NMOS IR driver. STM8L00
 - `VDD_TP`
 - `GND_TP`
 
+## Local symbol library binding
+- Project-local symbol library: `hardware/kicad/lib/irtool_symbols.kicad_sym`
+- Project symbol table entry: `hardware/kicad/sym-lib-table`
+- Intended first-pass symbol usage:
+  - `irtool_symbols:STM8L051F3P6` for U1
+  - `irtool_symbols:IRLML2502` for Q1
+  - `irtool_symbols:CR2032_Holder` for BT1
+  - `irtool_symbols:IR_LED` for D1
+  - `irtool_symbols:SW_Push` for SW1-SW3
+  - `irtool_symbols:TestPoint` for TP_SWIM / TP_NRST / TP_VDD / TP_GND
+  - `irtool_symbols:R`, `irtool_symbols:C`, `irtool_symbols:CP` for first-pass passives
+
 ## Deferred details
-- Exact symbol library binding
 - Exact footprint binding
 - PCB-only electrical/mechanical refinements
 - Any manufacturing annotations

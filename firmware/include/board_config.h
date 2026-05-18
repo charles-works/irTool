@@ -9,12 +9,13 @@
  */
 #define F_CPU_HZ 16000000UL
 
-/* First-pass debug-friendly pin map for STM8L051F3P6.
- * PA0/SWIM/BEEP/IR_TIM is kept as the IR output candidate because it has the
- * IR-related alternate function; NRST remains reserved for reset/debug.
- * Keys are ordinary active-low GPIO inputs with pull-ups and EXTI wake intent.
- * Verify exact package pin numbers against the datasheet during schematic
- * capture/bring-up before PCB layout.
+/* First-pass debug-friendly pin map for STM8L051F3P6 TSSOP-20.
+ * Legal package facts used by this revision:
+ *   - PA0 is pin 3 and doubles as SWIM/BEEP/IR_TIM.
+ *   - NRST/PA1 is pin 4 and remains the reset/debug access point.
+ *   - PB0/PB1 are pins 10/11 and are convenient for key inputs.
+ *   - PD0 is pin 9 and is a valid third key input if pull-up/debounce are used.
+ * Keys are active-low GPIO inputs with internal pull-ups and EXTI wake intent.
  */
 #define IR_PORT GPIOA
 #define IR_PIN  0u
@@ -23,11 +24,11 @@
 #define KEY1_PIN  0u
 #define KEY2_PORT GPIOB
 #define KEY2_PIN  1u
-#define KEY3_PORT GPIOC
-#define KEY3_PIN  3u
+#define KEY3_PORT GPIOD
+#define KEY3_PIN  0u
 
 #define DBG_STRAP_PORT GPIOC
-#define DBG_STRAP_PIN  4u
+#define DBG_STRAP_PIN  1u
 
 #define NEC_ADDR       0x80u
 #define NEC_ADDR_INV   0x7Fu

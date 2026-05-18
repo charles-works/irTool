@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name "irtool_symbols")(type "KiCad")(uri "${KIPRJMOD}/lib/irtool_symbols.kicad_sym")(options "")(descr "Minimal local symbol library for the STM8L051F3P6 + IRLML2502 IR remote electrical skeleton"))
+)
