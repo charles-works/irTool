@@ -1,6 +1,6 @@
 {
   "board": {"design_settings": {}, "layer_presets": []},
-  "boards": [],
+  "boards": ["remote.kicad_pcb"],
   "cvpcb": {},
   "libraries": {},
   "meta": {"filename": "remote.kicad_pro", "version": 1},

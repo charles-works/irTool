@@ -88,3 +88,11 @@ Active default: STM8L051F3P6 MCU with IRLML2502 low-side NMOS IR driver. STM8L00
 - PCB-only electrical/mechanical refinements
 - Any manufacturing annotations
 - Bench-measured waveform, current, distance, or power claims
+
+## PCB skeleton status
+- KiCad board file added: `hardware/kicad/remote.kicad_pcb`
+- Current content is a review/edit skeleton only:
+  - board outline
+  - primary nets aligned to schematic intent
+  - key component placement placeholders for U1/Q1/BT1/D1/R/C/SW/TP
+- Not yet a finished placement/routing result and not a production release layout.

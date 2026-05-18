@@ -7,6 +7,7 @@ STM8L001 references, if encountered in older notes, are legacy/background contex
 ## Files
 - `kicad/remote.kicad_pro` - project shell
 - `kicad/remote.kicad_sch` - root schematic opened by KiCad project preview
+- `kicad/remote.kicad_pcb` - PCB skeleton matching the first-pass schematic/BOM intent
 - `kicad/sym-lib-table` - project-local KiCad symbol library binding
 - `kicad/lib/irtool_symbols.kicad_sym` - minimal local symbol library for this first-pass design
 - `kicad/top.kicad_sch` - legacy top-level note page retained for review/reference
@@ -24,7 +25,7 @@ STM8L001 references, if encountered in older notes, are legacy/background contex
 ## Scope
 - Net and block organization only
 - Includes only the necessary local symbols for this project pass; not a full library pack
-- Not PCB-ready
+- Includes a non-production PCB skeleton for preview/edit continuation; not a completed layout
 - Not a production-ready PCB or complete library deliverable
 
 ## Editing intent
@@ -32,3 +33,4 @@ STM8L001 references, if encountered in older notes, are legacy/background contex
 - Treat the Markdown structure file as the authoritative mapping of blocks, nets, and deferred details for this first pass.
 - Use the project-local `irtool_symbols` library as the default symbol source for U1/Q1/BT1/D1/SW/TP and simple passives.
 - Open `remote.kicad_pro` / `remote.kicad_sch` as the project entry; the root sheet now references `mcu_keys.kicad_sch` and `power_ir.kicad_sch`.
+- `remote.kicad_pcb` currently includes board-outline and placement placeholders for U1/Q1/BT1/D1/R1/R2/R3/C1/C2/C3/SW1-SW3/TP1-TP5.
