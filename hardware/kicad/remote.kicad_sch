@@ -21,7 +21,6 @@
       )
     )
   )
-  ;; ---- Child sheet 1: MCU + Keys + Debug ----
   (sheet
     (at 35.56 45.72 0)
     (size 81.28 71.12)
@@ -35,7 +34,6 @@
     (pin "IR_GPIO" output (at 116.84 81.28 0) (effects (font (size 1.27 1.27)) (justify right)) (uuid "2e068f12-6b3d-45d8-a7a2-3d3e7c6f1013"))
     (instances (project "remote" (path "/2e068f12-6b3d-45d8-a7a2-3d3e7c6f1001/2e068f12-6b3d-45d8-a7a2-3d3e7c6f1002" (page "2"))))
   )
-  ;; ---- Child sheet 2: Power + IR Driver ----
   (sheet
     (at 149.86 45.72 0)
     (size 81.28 71.12)
@@ -49,11 +47,9 @@
     (pin "IR_GPIO" input (at 149.86 81.28 180) (effects (font (size 1.27 1.27)) (justify left)) (uuid "2e068f12-6b3d-45d8-a7a2-3d3e7c6f1023"))
     (instances (project "remote" (path "/2e068f12-6b3d-45d8-a7a2-3d3e7c6f1001/2e068f12-6b3d-45d8-a7a2-3d3e7c6f1003" (page "3"))))
   )
-  ;; ---- Inter-sheet wires ----
   (wire (pts (xy 116.84 60.96) (xy 149.86 60.96)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "2e068f12-6b3d-45d8-a7a2-3d3e7c6f1031"))
   (wire (pts (xy 116.84 71.12) (xy 149.86 71.12)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "2e068f12-6b3d-45d8-a7a2-3d3e7c6f1032"))
   (wire (pts (xy 116.84 81.28) (xy 149.86 81.28)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "2e068f12-6b3d-45d8-a7a2-3d3e7c6f1033"))
-  ;; ---- PWR_FLAG instances for ERC ----
   (symbol "irtool_symbols:PWR_FLAG" (at 133.35 58.42 0) (unit 1) (in_bom yes) (on_board yes)
     (uuid "2e068f12-6b3d-45d8-a7a2-3d3e7c6f1050")
     (property "Reference" "#FLG1" (at 133.35 56.515 0) (effects (font (size 1.27 1.27)) hide))
@@ -70,7 +66,6 @@
   )
   (wire (pts (xy 133.35 58.42) (xy 133.35 60.96)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "2e068f12-6b3d-45d8-a7a2-3d3e7c6f1054"))
   (wire (pts (xy 133.35 68.58) (xy 133.35 71.12)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "2e068f12-6b3d-45d8-a7a2-3d3e7c6f1055"))
-  ;; ---- Annotations ----
   (text "PWR_FLAG symbols satisfy ERC: VDD_MCU driven by BT1 CR2032, GND is battery return." (at 36.83 25.4 0) (effects (font (size 1.27 1.27))) (uuid "2e068f12-6b3d-45d8-a7a2-3d3e7c6f1041"))
   (text "Pin map: PA0=IR_GPIO/SWIM, PB0=KEY1_N, PB1=KEY2_N, PD0=KEY3_N, PC1=DBG_STRAP" (at 36.83 31.75 0) (effects (font (size 1.27 1.27))) (uuid "2e068f12-6b3d-45d8-a7a2-3d3e7c6f1042"))
   (text "Hierarchy: left = MCU+Keys+Debug, right = CR2032 power and IRLML2502 driver" (at 36.83 38.1 0) (effects (font (size 1.27 1.27))) (uuid "2e068f12-6b3d-45d8-a7a2-3d3e7c6f1043"))

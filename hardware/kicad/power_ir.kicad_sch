@@ -75,11 +75,9 @@
       )
     )
   )
-  ;; Hierarchical labels
   (hierarchical_label "VDD_MCU" (shape input) (at 25.4 30.48 0) (effects (font (size 1.27 1.27))) (uuid "d90b45e5-8bd2-48de-af1a-b95d5a3f3011"))
   (hierarchical_label "GND" (shape passive) (at 25.4 81.28 0) (effects (font (size 1.27 1.27))) (uuid "d90b45e5-8bd2-48de-af1a-b95d5a3f3012"))
   (hierarchical_label "IR_GPIO" (shape input) (at 25.4 45.72 0) (effects (font (size 1.27 1.27))) (uuid "d90b45e5-8bd2-48de-af1a-b95d5a3f3013"))
-  ;; ---- BT1: CR2032 holder ----
   (symbol "irtool_symbols:CR2032_Holder" (at 83.82 34.29 0) (unit 1) (in_bom yes) (on_board yes)
     (uuid "d90b45e5-8bd2-48de-af1a-b95d5a3f3030")
     (property "Reference" "BT1" (at 83.82 27.94 0) (effects (font (size 1.27 1.27))))
@@ -88,7 +86,6 @@
     (pin "2" (uuid "d90b45e5-8bd2-48de-af1a-b95d5a3f3032"))
     (instances (project "remote" (path "/d90b45e5-8bd2-48de-af1a-b95d5a3f3001" (reference "BT1") (unit 1))))
   )
-  ;; ---- C1: 100nF MCU decoupling ----
   (symbol "irtool_symbols:C" (at 96.52 50.8 90) (unit 1) (in_bom yes) (on_board yes)
     (uuid "d90b45e5-8bd2-48de-af1a-b95d5a3f3040")
     (property "Reference" "C1" (at 96.52 48.26 90) (effects (font (size 1.27 1.27))))
@@ -97,7 +94,6 @@
     (pin "2" (uuid "d90b45e5-8bd2-48de-af1a-b95d5a3f3042"))
     (instances (project "remote" (path "/d90b45e5-8bd2-48de-af1a-b95d5a3f3001" (reference "C1") (unit 1))))
   )
-  ;; ---- C2: 4.7uF bulk ----
   (symbol "irtool_symbols:C" (at 109.22 50.8 90) (unit 1) (in_bom yes) (on_board yes)
     (uuid "d90b45e5-8bd2-48de-af1a-b95d5a3f3050")
     (property "Reference" "C2" (at 109.22 48.26 90) (effects (font (size 1.27 1.27))))
@@ -106,7 +102,6 @@
     (pin "2" (uuid "d90b45e5-8bd2-48de-af1a-b95d5a3f3052"))
     (instances (project "remote" (path "/d90b45e5-8bd2-48de-af1a-b95d5a3f3001" (reference "C2") (unit 1))))
   )
-  ;; ---- C3: Optional 47uF IR burst reservoir ----
   (symbol "irtool_symbols:CP" (at 116.84 53.34 90) (unit 1) (in_bom yes) (on_board yes)
     (uuid "d90b45e5-8bd2-48de-af1a-b95d5a3f3060")
     (property "Reference" "C3" (at 116.84 49.53 90) (effects (font (size 1.27 1.27))))
@@ -115,7 +110,6 @@
     (pin "2" (uuid "d90b45e5-8bd2-48de-af1a-b95d5a3f3062"))
     (instances (project "remote" (path "/d90b45e5-8bd2-48de-af1a-b95d5a3f3001" (reference "C3") (unit 1))))
   )
-  ;; ---- R_GATE: 100R gate series resistor ----
   (symbol "irtool_symbols:R" (at 127 48.26 90) (unit 1) (in_bom yes) (on_board yes)
     (uuid "d90b45e5-8bd2-48de-af1a-b95d5a3f3033")
     (property "Reference" "R2" (at 124.46 48.26 90) (effects (font (size 1.27 1.27))))
@@ -124,7 +118,6 @@
     (pin "2" (uuid "d90b45e5-8bd2-48de-af1a-b95d5a3f3035"))
     (instances (project "remote" (path "/d90b45e5-8bd2-48de-af1a-b95d5a3f3001" (reference "R2") (unit 1))))
   )
-  ;; ---- Q1: IRLML2502 low-side NMOS ----
   (symbol "irtool_symbols:IRLML2502" (at 149.86 78.74 0) (unit 1) (in_bom yes) (on_board yes)
     (uuid "d90b45e5-8bd2-48de-af1a-b95d5a3f3036")
     (property "Reference" "Q1" (at 149.86 72.39 0) (effects (font (size 1.27 1.27))))
@@ -134,7 +127,6 @@
     (pin "3" (uuid "d90b45e5-8bd2-48de-af1a-b95d5a3f3039"))
     (instances (project "remote" (path "/d90b45e5-8bd2-48de-af1a-b95d5a3f3001" (reference "Q1") (unit 1))))
   )
-  ;; ---- R_PD: 1M gate pull-down ----
   (symbol "irtool_symbols:R" (at 149.86 91.44 0) (unit 1) (in_bom yes) (on_board yes)
     (uuid "d90b45e5-8bd2-48de-af1a-b95d5a3f3063")
     (property "Reference" "R_PD" (at 149.86 88.9 0) (effects (font (size 1.27 1.27))))
@@ -143,7 +135,6 @@
     (pin "2" (uuid "d90b45e5-8bd2-48de-af1a-b95d5a3f3065"))
     (instances (project "remote" (path "/d90b45e5-8bd2-48de-af1a-b95d5a3f3001" (reference "R_PD") (unit 1))))
   )
-  ;; ---- R1: IR LED current limiter (10-22R placeholder) ----
   (symbol "irtool_symbols:R" (at 160.02 60.96 90) (unit 1) (in_bom yes) (on_board yes)
     (uuid "d90b45e5-8bd2-48de-af1a-b95d5a3f3066")
     (property "Reference" "R1" (at 157.48 60.96 90) (effects (font (size 1.27 1.27))))
@@ -152,7 +143,6 @@
     (pin "2" (uuid "d90b45e5-8bd2-48de-af1a-b95d5a3f3068"))
     (instances (project "remote" (path "/d90b45e5-8bd2-48de-af1a-b95d5a3f3001" (reference "R1") (unit 1))))
   )
-  ;; ---- D1: IR LED ----
   (symbol "irtool_symbols:IR_LED" (at 175.26 71.12 0) (unit 1) (in_bom yes) (on_board yes)
     (uuid "d90b45e5-8bd2-48de-af1a-b95d5a3f3069")
     (property "Reference" "D1" (at 175.26 66.04 0) (effects (font (size 1.27 1.27))))
@@ -161,40 +151,23 @@
     (pin "2" (uuid "d90b45e5-8bd2-48de-af1a-b95d5a3f306b"))
     (instances (project "remote" (path "/d90b45e5-8bd2-48de-af1a-b95d5a3f3001" (reference "D1") (unit 1))))
   )
-  ;; ==== WIRES ====
-  ;; VDD_MCU label -> BT1+ (battery plus terminal)
   (wire (pts (xy 25.4 30.48) (xy 83.82 30.48) (xy 83.82 33.02)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "d90b45e5-8bd2-48de-af1a-b95d5a3f3072"))
-  ;; BT1+ -> VDD_MCU rail (horizontal to caps)
   (wire (pts (xy 83.82 35.56) (xy 83.82 36.83) (xy 116.84 36.83) (xy 116.84 55.88)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "d90b45e5-8bd2-48de-af1a-b95d5a3f3073"))
-  ;; VDD rail to C1 pin 1
   (wire (pts (xy 83.82 36.83) (xy 83.82 50.8) (xy 91.44 50.8)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "d90b45e5-8bd2-48de-af1a-b95d5a3f3073a"))
-  ;; VDD rail to C2 pin 1
   (wire (pts (xy 91.44 50.8) (xy 104.14 50.8)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "d90b45e5-8bd2-48de-af1a-b95d5a3f3073b"))
-  ;; VDD rail to C3 pin 1
   (wire (pts (xy 104.14 50.8) (xy 111.76 50.8) (xy 111.76 53.34)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "d90b45e5-8bd2-48de-af1a-b95d5a3f3073c"))
-  ;; VDD_MCU rail to R1 pin 1 (current limiter for IR LED)
   (wire (pts (xy 116.84 55.88) (xy 154.94 55.88) (xy 154.94 60.96)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "d90b45e5-8bd2-48de-af1a-b95d5a3f3074"))
-  ;; R1 pin 2 -> D1 anode
   (wire (pts (xy 165.1 60.96) (xy 170.18 60.96) (xy 170.18 71.12)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "d90b45e5-8bd2-48de-af1a-b95d5a3f3075"))
-  ;; D1 cathode -> Q1 drain (IR_LED_K)
   (wire (pts (xy 180.34 71.12) (xy 185.42 71.12) (xy 185.42 81.28) (xy 154.94 81.28)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "d90b45e5-8bd2-48de-af1a-b95d5a3f3076"))
-  ;; GND label -> BT1- (battery minus)
   (wire (pts (xy 25.4 81.28) (xy 78.74 81.28) (xy 78.74 38.1) (xy 83.82 38.1)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "d90b45e5-8bd2-48de-af1a-b95d5a3f3077"))
-  ;; GND to capacitors C1, C2, C3 pin 2
   (wire (pts (xy 78.74 81.28) (xy 78.74 55.88) (xy 91.44 55.88)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "d90b45e5-8bd2-48de-af1a-b95d5a3f3077a"))
   (wire (pts (xy 91.44 55.88) (xy 104.14 55.88)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "d90b45e5-8bd2-48de-af1a-b95d5a3f3077b"))
   (wire (pts (xy 104.14 55.88) (xy 121.92 55.88) (xy 121.92 53.34)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "d90b45e5-8bd2-48de-af1a-b95d5a3f3077c"))
-  ;; IR_GPIO label -> R_GATE pin 1
   (wire (pts (xy 25.4 45.72) (xy 114.3 45.72) (xy 114.3 48.26) (xy 121.92 48.26)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "d90b45e5-8bd2-48de-af1a-b95d5a3f3078"))
-  ;; R_GATE pin 2 -> Q1 gate
   (wire (pts (xy 132.08 48.26) (xy 142.24 48.26) (xy 142.24 78.74) (xy 144.78 78.74)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "d90b45e5-8bd2-48de-af1a-b95d5a3f3079"))
-  ;; Q1 gate junction -> R_PD pin 1
   (wire (pts (xy 142.24 78.74) (xy 142.24 91.44) (xy 144.78 91.44)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "d90b45e5-8bd2-48de-af1a-b95d5a3f3080"))
-  ;; R_PD pin 2 -> GND
   (wire (pts (xy 154.94 91.44) (xy 154.94 96.52) (xy 78.74 96.52) (xy 78.74 81.28)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "d90b45e5-8bd2-48de-af1a-b95d5a3f3081"))
-  ;; Q1 source -> GND
   (wire (pts (xy 149.86 81.28) (xy 149.86 96.52)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "d90b45e5-8bd2-48de-af1a-b95d5a3f3082"))
-  ;; ---- Annotations ----
   (text "IRLML2502 low-side topology: G=R2/IR_GATE, D=IR_LED_K, S=GND" (at 63.5 104.14 0) (effects (font (size 1.27 1.27))) (uuid "d90b45e5-8bd2-48de-af1a-b95d5a3f3091"))
   (text "R1 limits IR LED current from CR2032+. Final 10-22R value requires bench validation." (at 63.5 109.22 0) (effects (font (size 1.27 1.27))) (uuid "d90b45e5-8bd2-48de-af1a-b95d5a3f3092"))
   (text "C1/C2 mandatory decoupling; C3 optional IR burst reservoir (47-100uF, validate leakage)" (at 63.5 114.3 0) (effects (font (size 1.27 1.27))) (uuid "d90b45e5-8bd2-48de-af1a-b95d5a3f3093"))

@@ -44,7 +44,6 @@
       (pdf_metadata yes) (pdf_single_document no)
     )
   )
-  ;; ---- Net definitions ----
   (net 0 "")
   (net 1 "GND")
   (net 2 "VDD_MCU")
@@ -58,7 +57,6 @@
   (net 10 "UNUSED")
   (net 11 "NRST_TP")
   (net 12 "DBG_STRAP")
-  ;; ---- Net classes ----
   (net_class "Default" ""
     (clearance 0.2) (trace_width 0.25) (via_dia 0.6) (via_drill 0.3)
     (uvia_dia 0.3) (uvia_drill 0.1)
@@ -68,9 +66,6 @@
     (uvia_dia 0.3) (uvia_drill 0.1)
     (add_net "VDD_MCU") (add_net "GND") (add_net "IR_LED_A") (add_net "IR_LED_K")
   )
-  ;; ================================================================
-  ;; U1: STM8L051F3P6 TSSOP-20 at (105, 75)
-  ;; ================================================================
   (footprint "irtool:U1_STM8L051F3P6_TSSOP20" (layer "F.Cu")
     (tstamp "89c6f6f4-ec90-4bd7-89de-ae5f00010001")
     (at 105 75)
@@ -82,7 +77,6 @@
     (fp_line (start 3.6 3.25) (end -3.6 3.25) (stroke (width 0.12) (type solid)) (layer "F.SilkS"))
     (fp_line (start -3.6 3.25) (end -3.6 -3.25) (stroke (width 0.12) (type solid)) (layer "F.SilkS"))
     (fp_circle (center -2.8 -2.35) (end -2.5 -2.35) (stroke (width 0.12) (type solid)) (fill none) (layer "F.SilkS"))
-    ;; Left-side pads (pins 1-11)
     (pad "1" smd rect (at -5.05 -2.925) (size 1.4 0.35) (layers "F.Cu" "F.Paste" "F.Mask") (net 2 "VDD_MCU") (pinfunction "VDD") (pintype "power_in"))
     (pad "2" smd rect (at -5.05 -2.275) (size 1.4 0.35) (layers "F.Cu" "F.Paste" "F.Mask") (net 1 "GND") (pinfunction "PC7") (pintype "bidirectional"))
     (pad "3" smd rect (at -5.05 -1.625) (size 1.4 0.35) (layers "F.Cu" "F.Paste" "F.Mask") (net 3 "IR_GPIO") (pinfunction "PA0/SWIM/IR") (pintype "bidirectional"))
@@ -94,7 +88,6 @@
     (pad "9" smd rect (at -5.05 2.275) (size 1.4 0.35) (layers "F.Cu" "F.Paste" "F.Mask") (net 7 "KEY3_N") (pinfunction "PD0") (pintype "bidirectional"))
     (pad "10" smd rect (at -5.05 2.925) (size 1.4 0.35) (layers "F.Cu" "F.Paste" "F.Mask") (net 5 "KEY1_N") (pinfunction "PB0") (pintype "bidirectional"))
     (pad "11" smd rect (at -5.05 3.575) (size 1.4 0.35) (layers "F.Cu" "F.Paste" "F.Mask") (net 6 "KEY2_N") (pinfunction "PB1") (pintype "bidirectional"))
-    ;; Right-side pads (pins 12-20)
     (pad "12" smd rect (at 5.05 -3.575) (size 1.4 0.35) (layers "F.Cu" "F.Paste" "F.Mask") (net 1 "GND") (pinfunction "PB2") (pintype "bidirectional"))
     (pad "13" smd rect (at 5.05 -2.925) (size 1.4 0.35) (layers "F.Cu" "F.Paste" "F.Mask") (net 1 "GND") (pinfunction "PB3") (pintype "bidirectional"))
     (pad "14" smd rect (at 5.05 -2.275) (size 1.4 0.35) (layers "F.Cu" "F.Paste" "F.Mask") (net 1 "GND") (pinfunction "PB4") (pintype "bidirectional"))
@@ -105,9 +98,6 @@
     (pad "19" smd rect (at 5.05 0.975) (size 1.4 0.35) (layers "F.Cu" "F.Paste" "F.Mask") (net 12 "DBG_STRAP") (pinfunction "PC1") (pintype "bidirectional"))
     (pad "20" smd rect (at 5.05 1.625) (size 1.4 0.35) (layers "F.Cu" "F.Paste" "F.Mask") (net 1 "GND") (pinfunction "VSS") (pintype "power_in"))
   )
-  ;; ================================================================
-  ;; Q1: IRLML2502 SOT-23 at (135, 66)
-  ;; ================================================================
   (footprint "irtool:Q1_IRLML2502_SOT23" (layer "F.Cu")
     (tstamp "89c6f6f4-ec90-4bd7-89de-ae5f00010002")
     (at 135 66)
@@ -122,9 +112,6 @@
     (pad "2" smd rect (at 1.6 -1) (size 1 0.6) (layers "F.Cu" "F.Paste" "F.Mask") (net 1 "GND") (pinfunction "S") (pintype "passive"))
     (pad "3" smd rect (at 1.6 1) (size 1 0.6) (layers "F.Cu" "F.Paste" "F.Mask") (net 9 "IR_LED_K") (pinfunction "D") (pintype "passive"))
   )
-  ;; ================================================================
-  ;; R2 (R_GATE): 100R gate series resistor 0603 at (128, 67)
-  ;; ================================================================
   (footprint "irtool:R2_GATE_100R_0603" (layer "F.Cu")
     (tstamp "89c6f6f4-ec90-4bd7-89de-ae5f00010003")
     (at 128 67)
@@ -138,9 +125,6 @@
     (pad "1" smd rect (at -1.35 0) (size 0.8 0.8) (layers "F.Cu" "F.Paste" "F.Mask") (net 3 "IR_GPIO") (pinfunction "~") (pintype "passive"))
     (pad "2" smd rect (at 1.35 0) (size 0.8 0.8) (layers "F.Cu" "F.Paste" "F.Mask") (net 4 "IR_GATE") (pinfunction "~") (pintype "passive"))
   )
-  ;; ================================================================
-  ;; R_PD: 1M gate pull-down 0603 at (132, 60)
-  ;; ================================================================
   (footprint "irtool:R_PD_1M_0603" (layer "F.Cu")
     (tstamp "89c6f6f4-ec90-4bd7-89de-ae5f00010004")
     (at 132 60)
@@ -154,9 +138,6 @@
     (pad "1" smd rect (at -1.35 0) (size 0.8 0.8) (layers "F.Cu" "F.Paste" "F.Mask") (net 4 "IR_GATE") (pinfunction "~") (pintype "passive"))
     (pad "2" smd rect (at 1.35 0) (size 0.8 0.8) (layers "F.Cu" "F.Paste" "F.Mask") (net 1 "GND") (pinfunction "~") (pintype "passive"))
   )
-  ;; ================================================================
-  ;; R1: IR LED current limiter 0603 at (155, 73) vertical
-  ;; ================================================================
   (footprint "irtool:R1_IR_LED_0603" (layer "F.Cu")
     (tstamp "89c6f6f4-ec90-4bd7-89de-ae5f00010005")
     (at 155 73)
@@ -170,9 +151,6 @@
     (pad "1" smd rect (at 0 -1.35) (size 0.8 0.8) (layers "F.Cu" "F.Paste" "F.Mask") (net 2 "VDD_MCU") (pinfunction "~") (pintype "passive"))
     (pad "2" smd rect (at 0 1.35) (size 0.8 0.8) (layers "F.Cu" "F.Paste" "F.Mask") (net 8 "IR_LED_A") (pinfunction "~") (pintype "passive"))
   )
-  ;; ================================================================
-  ;; D1: IR LED THT 5mm at (164, 75)
-  ;; ================================================================
   (footprint "irtool:D1_IR_LED_5mm" (layer "F.Cu")
     (tstamp "89c6f6f4-ec90-4bd7-89de-ae5f00010006")
     (at 164 75)
@@ -183,9 +161,6 @@
     (pad "1" thru_hole circle (at -2.54 0) (size 2 2) (drill 1) (layers "F.Cu" "*.Paste" "*.Mask") (net 8 "IR_LED_A") (pinfunction "A") (pintype "passive"))
     (pad "2" thru_hole circle (at 2.54 0) (size 2 2) (drill 1) (layers "F.Cu" "*.Paste" "*.Mask") (net 9 "IR_LED_K") (pinfunction "K") (pintype "passive"))
   )
-  ;; ================================================================
-  ;; C1: 100nF decoupling 0402 at (99, 82)
-  ;; ================================================================
   (footprint "irtool:C1_100nF_0402" (layer "F.Cu")
     (tstamp "89c6f6f4-ec90-4bd7-89de-ae5f00010007")
     (at 99 82)
@@ -195,9 +170,6 @@
     (pad "1" smd rect (at -0.5 0) (size 0.6 0.6) (layers "F.Cu" "F.Paste" "F.Mask") (net 2 "VDD_MCU") (pinfunction "~") (pintype "passive"))
     (pad "2" smd rect (at 0.5 0) (size 0.6 0.6) (layers "F.Cu" "F.Paste" "F.Mask") (net 1 "GND") (pinfunction "~") (pintype "passive"))
   )
-  ;; ================================================================
-  ;; C2: 4.7uF bulk 0603 at (99, 86)
-  ;; ================================================================
   (footprint "irtool:C2_4u7F_0603" (layer "F.Cu")
     (tstamp "89c6f6f4-ec90-4bd7-89de-ae5f00010008")
     (at 99 86)
@@ -207,9 +179,6 @@
     (pad "1" smd rect (at -1 0) (size 0.8 0.8) (layers "F.Cu" "F.Paste" "F.Mask") (net 2 "VDD_MCU") (pinfunction "~") (pintype "passive"))
     (pad "2" smd rect (at 1 0) (size 0.8 0.8) (layers "F.Cu" "F.Paste" "F.Mask") (net 1 "GND") (pinfunction "~") (pintype "passive"))
   )
-  ;; ================================================================
-  ;; C3: Optional 47uF IR reservoir at (99, 90)
-  ;; ================================================================
   (footprint "irtool:C3_47uF_OPT" (layer "F.Cu")
     (tstamp "89c6f6f4-ec90-4bd7-89de-ae5f00010009")
     (at 99 90)
@@ -219,9 +188,6 @@
     (pad "1" smd rect (at -1.5 0) (size 1.2 1.2) (layers "F.Cu" "F.Paste" "F.Mask") (net 2 "VDD_MCU") (pinfunction "+") (pintype "passive"))
     (pad "2" smd rect (at 1.5 0) (size 1.2 1.2) (layers "F.Cu" "F.Paste" "F.Mask") (net 1 "GND") (pinfunction "-") (pintype "passive"))
   )
-  ;; ================================================================
-  ;; BT1: CR2032 holder at (75, 75)
-  ;; ================================================================
   (footprint "irtool:BT1_CR2032_Holder" (layer "B.Cu")
     (tstamp "89c6f6f4-ec90-4bd7-89de-ae5f0001000a")
     (at 75 75)
@@ -233,9 +199,6 @@
     (pad "1" thru_hole circle (at 0 -8) (size 3 3) (drill 1.5) (layers "B.Cu" "*.Paste" "*.Mask") (net 2 "VDD_MCU") (pinfunction "+") (pintype "passive"))
     (pad "2" thru_hole circle (at 0 8) (size 3 3) (drill 1.5) (layers "B.Cu" "*.Paste" "*.Mask") (net 1 "GND") (pinfunction "-") (pintype "passive"))
   )
-  ;; ================================================================
-  ;; SW1-SW3: Tactile switches at bottom edge
-  ;; ================================================================
   (footprint "irtool:SW1_KEY1" (layer "F.Cu")
     (tstamp "89c6f6f4-ec90-4bd7-89de-ae5f0001000b")
     (at 115 100)
@@ -275,9 +238,6 @@
     (pad "1" smd rect (at -4 0) (size 1.5 1) (layers "F.Cu" "F.Paste" "F.Mask") (net 7 "KEY3_N") (pinfunction "1") (pintype "passive"))
     (pad "2" smd rect (at 4 0) (size 1.5 1) (layers "F.Cu" "F.Paste" "F.Mask") (net 1 "GND") (pinfunction "2") (pintype "passive"))
   )
-  ;; ================================================================
-  ;; TP1-TP5: Test points (SMD pads)
-  ;; ================================================================
   (footprint "irtool:TP1_SWIM" (layer "F.Cu")
     (tstamp "89c6f6f4-ec90-4bd7-89de-ae5f00010010")
     (at 85 55) (attr smd)
@@ -313,9 +273,6 @@
     (fp_text value "DBG" (at 0 2) (layer "F.Fab") (effects (font (size 0.6 0.6) (thickness 0.1))))
     (pad "1" smd circle (at 0 0) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (net 12 "DBG_STRAP") (pinfunction "TP") (pintype "passive"))
   )
-  ;; ================================================================
-  ;; Mounting holes (4x M2 at corners)
-  ;; ================================================================
   (footprint "MountingHole:MountingHole_2.2mm_M2" (layer "F.Cu")
     (tstamp "89c6f6f4-ec90-4bd7-89de-ae5f00010020") (at 15 50) (attr through_hole)
     (fp_text reference "H1" (at 0 -2.5) (layer "F.SilkS") (effects (font (size 0.8 0.8) (thickness 0.12))))
@@ -340,10 +297,6 @@
     (fp_text value "M2" (at 0 2.5) (layer "F.Fab") (effects (font (size 0.6 0.6) (thickness 0.1))))
     (pad "1" thru_hole circle (at 0 0) (size 4.5 4.5) (drill 2.2) (layers "*.Cu" "*.Mask") (net 1 "GND"))
   )
-  ;; ================================================================
-  ;; TRACE ROUTING
-  ;; ================================================================
-  ;; --- VDD_MCU power rail: BT1+ -> U1 pin1 -> C1/C2/C3 -> R1 ---
   (segment (start 75 67) (end 99.95 67) (width 0.5) (layer "F.Cu") (net 2) (tstamp "a0000001"))
   (segment (start 99.95 67) (end 99.95 72.075) (width 0.5) (layer "F.Cu") (net 2) (tstamp "a0000002"))
   (segment (start 99.95 72.075) (end 99.95 82) (width 0.5) (layer "F.Cu") (net 2) (tstamp "a0000003"))
@@ -352,43 +305,29 @@
   (segment (start 99.95 82) (end 97.5 90) (width 0.5) (layer "F.Cu") (net 2) (tstamp "a0000006"))
   (segment (start 99.95 72.075) (end 155 72.075) (width 0.5) (layer "F.Cu") (net 2) (tstamp "a0000007"))
   (segment (start 155 72.075) (end 155 71.65) (width 0.5) (layer "F.Cu") (net 2) (tstamp "a0000008"))
-  ;; --- IR_GPIO: U1 pin3 -> R2 pin1 ---
   (segment (start 99.95 73.375) (end 96 73.375) (width 0.25) (layer "F.Cu") (net 3) (tstamp "a0000010"))
   (segment (start 96 73.375) (end 96 67) (width 0.25) (layer "F.Cu") (net 3) (tstamp "a0000011"))
   (segment (start 96 67) (end 126.65 67) (width 0.25) (layer "F.Cu") (net 3) (tstamp "a0000012"))
-  ;; --- IR_GATE: R2 pin2 -> Q1 gate + R_PD pin1 ---
   (segment (start 129.35 67) (end 133.4 67) (width 0.25) (layer "F.Cu") (net 4) (tstamp "a0000020"))
   (segment (start 133.4 67) (end 133.4 60) (width 0.25) (layer "F.Cu") (net 4) (tstamp "a0000021"))
   (segment (start 133.4 60) (end 130.65 60) (width 0.25) (layer "F.Cu") (net 4) (tstamp "a0000022"))
-  ;; --- IR_LED_K: Q1 drain -> D1 cathode ---
   (segment (start 136.6 67) (end 150 70) (width 0.25) (layer "F.Cu") (net 9) (tstamp "a0000030"))
   (segment (start 150 70) (end 166.54 75) (width 0.25) (layer "F.Cu") (net 9) (tstamp "a0000031"))
-  ;; --- IR_LED_A: R1 pin2 -> D1 anode ---
   (segment (start 155 74.35) (end 159 75) (width 0.25) (layer "F.Cu") (net 8) (tstamp "a0000040"))
-  ;; --- KEY1_N: U1 pin10 -> SW1 pin1 ---
   (segment (start 110.05 77.925) (end 110.05 100) (width 0.25) (layer "F.Cu") (net 5) (tstamp "a0000050"))
-  ;; --- KEY2_N: U1 pin11 -> SW2 pin1 ---
   (segment (start 110.05 78.575) (end 115 78.575) (width 0.25) (layer "F.Cu") (net 6) (tstamp "a0000060"))
   (segment (start 115 78.575) (end 115 80) (width 0.25) (layer "F.Cu") (net 6) (tstamp "a0000061"))
   (segment (start 115 80) (end 131 80) (width 0.25) (layer "F.Cu") (net 6) (tstamp "a0000062"))
   (segment (start 131 80) (end 131 100) (width 0.25) (layer "F.Cu") (net 6) (tstamp "a0000063"))
-  ;; --- KEY3_N: U1 pin9 -> SW3 pin1 ---
   (segment (start 99.95 77.275) (end 99.95 78) (width 0.25) (layer "F.Cu") (net 7) (tstamp "a0000070"))
   (segment (start 99.95 78) (end 111 78) (width 0.25) (layer "F.Cu") (net 7) (tstamp "a0000071"))
   (segment (start 111 78) (end 111 110) (width 0.25) (layer "F.Cu") (net 7) (tstamp "a0000072"))
-  ;; --- NRST_TP: U1 pin4 -> TP2 ---
   (segment (start 99.95 74.025) (end 92 74.025) (width 0.25) (layer "F.Cu") (net 11) (tstamp "a0000080"))
   (segment (start 92 74.025) (end 92 55) (width 0.25) (layer "F.Cu") (net 11) (tstamp "a0000081"))
-  ;; --- DBG_STRAP: U1 pin19 -> TP5 ---
   (segment (start 110.05 75.975) (end 113 75.975) (width 0.25) (layer "F.Cu") (net 12) (tstamp "a0000090"))
   (segment (start 113 75.975) (end 113 55) (width 0.25) (layer "F.Cu") (net 12) (tstamp "a0000091"))
-  ;; --- TP1 (SWIM): to IR_GPIO node ---
   (segment (start 85 55) (end 85 67) (width 0.25) (layer "F.Cu") (net 3) (tstamp "a00000a0"))
-  ;; --- TP3 (VDD): to VDD_MCU node ---
   (segment (start 99 55) (end 99 67) (width 0.5) (layer "F.Cu") (net 2) (tstamp "a00000b0"))
-  ;; ================================================================
-  ;; GND ZONES (front and back copper)
-  ;; ================================================================
   (zone
     (net 1) (net_name "GND") (layer "B.Cu")
     (tstamp "89c6f6f4-ec90-4bd7-89de-ae5f00060002")
@@ -411,9 +350,6 @@
     (fill yes (thermal_gap 0.3) (thermal_bridge_width 0.3))
     (polygon (pts (xy 5 40) (xy 185 40) (xy 185 125) (xy 5 125)))
   )
-  ;; ================================================================
-  ;; Board outline with rounded corners (2mm radius)
-  ;; ================================================================
   (gr_arc (center 12 47) (end 10 47) (angle -90) (stroke (width 0.1) (type default)) (layer "Edge.Cuts") (tstamp "b0000001"))
   (gr_line (start 12 45) (end 178 45) (stroke (width 0.1) (type default)) (layer "Edge.Cuts") (tstamp "b0000002"))
   (gr_arc (center 178 47) (end 180 47) (angle -90) (stroke (width 0.1) (type default)) (layer "Edge.Cuts") (tstamp "b0000003"))
@@ -422,9 +358,6 @@
   (gr_line (start 178 120) (end 12 120) (stroke (width 0.1) (type default)) (layer "Edge.Cuts") (tstamp "b0000006"))
   (gr_arc (center 12 118) (end 10 118) (angle 90) (stroke (width 0.1) (type default)) (layer "Edge.Cuts") (tstamp "b0000007"))
   (gr_line (start 10 118) (end 10 47) (stroke (width 0.1) (type default)) (layer "Edge.Cuts") (tstamp "b0000008"))
-  ;; ================================================================
-  ;; Silkscreen labels
-  ;; ================================================================
   (gr_text "STM8L051F3P6 IR Remote" (at 100 43 0) (layer "F.SilkS") (effects (font (size 1.5 1.5) (thickness 0.2))) (tstamp "c0000001"))
   (gr_text "TP1 SWIM" (at 85 52 0) (layer "F.SilkS") (effects (font (size 0.6 0.6) (thickness 0.1))) (tstamp "c0000002"))
   (gr_text "TP2 NRST" (at 92 52 0) (layer "F.SilkS") (effects (font (size 0.6 0.6) (thickness 0.1))) (tstamp "c0000003"))

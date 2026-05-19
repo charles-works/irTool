@@ -84,17 +84,14 @@
       )
     )
   )
-  ;; Hierarchical labels for inter-sheet connectivity
   (hierarchical_label "VDD_MCU" (shape input) (at 25.4 45.72 0) (effects (font (size 1.27 1.27))) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2011"))
   (hierarchical_label "GND" (shape passive) (at 25.4 106.68 0) (effects (font (size 1.27 1.27))) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2012"))
   (hierarchical_label "IR_GPIO" (shape output) (at 25.4 63.5 0) (effects (font (size 1.27 1.27))) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2013"))
-  ;; Local net labels
   (label "KEY1_N" (at 182.88 50.8 0) (effects (font (size 1.27 1.27))) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2014"))
   (label "KEY2_N" (at 182.88 60.96 0) (effects (font (size 1.27 1.27))) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2015"))
   (label "KEY3_N" (at 182.88 71.12 0) (effects (font (size 1.27 1.27))) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2016"))
   (label "DBG_STRAP" (at 182.88 81.28 0) (effects (font (size 1.27 1.27))) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2017"))
   (label "NRST_TP" (at 78.74 63.5 0) (effects (font (size 1.27 1.27))) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2018"))
-  ;; ---- U1: STM8L051F3P6 (full 20-pin) ----
   (symbol "irtool_symbols:STM8L051F3P6" (at 116.84 71.12 0) (unit 1) (in_bom yes) (on_board yes)
     (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2040")
     (property "Reference" "U1" (at 116.84 41.91 0) (effects (font (size 1.27 1.27))))
@@ -122,7 +119,6 @@
     (pin "20" (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2054"))
     (instances (project "remote" (path "/4a7a9960-a803-42d7-9baf-7a81f45e2001" (reference "U1") (unit 1))))
   )
-  ;; ---- Decoupling C4 (100nF) close to U1 VDD/VSS ----
   (symbol "irtool_symbols:C" (at 99.06 58.42 90) (unit 1) (in_bom yes) (on_board yes)
     (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2055")
     (property "Reference" "C4" (at 96.52 58.42 90) (effects (font (size 1.27 1.27))))
@@ -131,8 +127,6 @@
     (pin "2" (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2057"))
     (instances (project "remote" (path "/4a7a9960-a803-42d7-9baf-7a81f45e2001" (reference "C4") (unit 1))))
   )
-  ;; ---- Pull-down resistors for unused pins ----
-  ;; RD1: pin 2 PC7
   (symbol "irtool_symbols:R" (at 40.64 76.2 0) (unit 1) (in_bom yes) (on_board yes)
     (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2060")
     (property "Reference" "RD1" (at 40.64 73.66 0) (effects (font (size 1.27 1.27))))
@@ -141,7 +135,6 @@
     (pin "2" (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2062"))
     (instances (project "remote" (path "/4a7a9960-a803-42d7-9baf-7a81f45e2001" (reference "RD1") (unit 1))))
   )
-  ;; RD2: pin 5 PA2
   (symbol "irtool_symbols:R" (at 40.64 86.36 0) (unit 1) (in_bom yes) (on_board yes)
     (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2063")
     (property "Reference" "RD2" (at 40.64 83.82 0) (effects (font (size 1.27 1.27))))
@@ -150,7 +143,6 @@
     (pin "2" (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2065"))
     (instances (project "remote" (path "/4a7a9960-a803-42d7-9baf-7a81f45e2001" (reference "RD2") (unit 1))))
   )
-  ;; RD3: pin 6 PA3
   (symbol "irtool_symbols:R" (at 40.64 96.52 0) (unit 1) (in_bom yes) (on_board yes)
     (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2066")
     (property "Reference" "RD3" (at 40.64 93.98 0) (effects (font (size 1.27 1.27))))
@@ -159,7 +151,6 @@
     (pin "2" (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2068"))
     (instances (project "remote" (path "/4a7a9960-a803-42d7-9baf-7a81f45e2001" (reference "RD3") (unit 1))))
   )
-  ;; RD4: pin 7 PB7
   (symbol "irtool_symbols:R" (at 40.64 106.68 0) (unit 1) (in_bom yes) (on_board yes)
     (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2069")
     (property "Reference" "RD4" (at 40.64 104.14 0) (effects (font (size 1.27 1.27))))
@@ -168,8 +159,6 @@
     (pin "2" (uuid "4a7a9960-a803-42d7-9baf-7a81f45e206b"))
     (instances (project "remote" (path "/4a7a9960-a803-42d7-9baf-7a81f45e2001" (reference "RD4") (unit 1))))
   )
-  ;; RD5-RD10: pins 12-18 (right side, PB2-PB6, PC4, PC5)
-  ;; RD5: pin 12 PB2
   (symbol "irtool_symbols:R" (at 160.02 68.58 0) (unit 1) (in_bom yes) (on_board yes)
     (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2070")
     (property "Reference" "RD5" (at 160.02 66.04 0) (effects (font (size 1.27 1.27))))
@@ -178,7 +167,6 @@
     (pin "2" (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2072"))
     (instances (project "remote" (path "/4a7a9960-a803-42d7-9baf-7a81f45e2001" (reference "RD5") (unit 1))))
   )
-  ;; RD6: pin 13 PB3
   (symbol "irtool_symbols:R" (at 160.02 78.74 0) (unit 1) (in_bom yes) (on_board yes)
     (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2073")
     (property "Reference" "RD6" (at 160.02 76.2 0) (effects (font (size 1.27 1.27))))
@@ -187,7 +175,6 @@
     (pin "2" (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2075"))
     (instances (project "remote" (path "/4a7a9960-a803-42d7-9baf-7a81f45e2001" (reference "RD6") (unit 1))))
   )
-  ;; RD7: pin 14 PB4
   (symbol "irtool_symbols:R" (at 160.02 88.9 0) (unit 1) (in_bom yes) (on_board yes)
     (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2076")
     (property "Reference" "RD7" (at 160.02 86.36 0) (effects (font (size 1.27 1.27))))
@@ -196,7 +183,6 @@
     (pin "2" (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2078"))
     (instances (project "remote" (path "/4a7a9960-a803-42d7-9baf-7a81f45e2001" (reference "RD7") (unit 1))))
   )
-  ;; RD8: pin 15 PB5
   (symbol "irtool_symbols:R" (at 160.02 99.06 0) (unit 1) (in_bom yes) (on_board yes)
     (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2079")
     (property "Reference" "RD8" (at 160.02 96.52 0) (effects (font (size 1.27 1.27))))
@@ -205,7 +191,6 @@
     (pin "2" (uuid "4a7a9960-a803-42d7-9baf-7a81f45e207b"))
     (instances (project "remote" (path "/4a7a9960-a803-42d7-9baf-7a81f45e2001" (reference "RD8") (unit 1))))
   )
-  ;; RD9: pin 16 PB6
   (symbol "irtool_symbols:R" (at 160.02 109.22 0) (unit 1) (in_bom yes) (on_board yes)
     (uuid "4a7a9960-a803-42d7-9baf-7a81f45e207c")
     (property "Reference" "RD9" (at 160.02 106.68 0) (effects (font (size 1.27 1.27))))
@@ -214,7 +199,6 @@
     (pin "2" (uuid "4a7a9960-a803-42d7-9baf-7a81f45e207e"))
     (instances (project "remote" (path "/4a7a9960-a803-42d7-9baf-7a81f45e2001" (reference "RD9") (unit 1))))
   )
-  ;; RD10: pin 17 PC4
   (symbol "irtool_symbols:R" (at 160.02 119.38 0) (unit 1) (in_bom yes) (on_board yes)
     (uuid "4a7a9960-a803-42d7-9baf-7a81f45e207f")
     (property "Reference" "RD10" (at 160.02 116.84 0) (effects (font (size 1.27 1.27))))
@@ -223,7 +207,6 @@
     (pin "2" (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2081"))
     (instances (project "remote" (path "/4a7a9960-a803-42d7-9baf-7a81f45e2001" (reference "RD10") (unit 1))))
   )
-  ;; RD11: pin 18 PC5
   (symbol "irtool_symbols:R" (at 160.02 129.54 0) (unit 1) (in_bom yes) (on_board yes)
     (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2082")
     (property "Reference" "RD11" (at 160.02 127 0) (effects (font (size 1.27 1.27))))
@@ -232,7 +215,6 @@
     (pin "2" (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2084"))
     (instances (project "remote" (path "/4a7a9960-a803-42d7-9baf-7a81f45e2001" (reference "RD11") (unit 1))))
   )
-  ;; ---- Test Points ----
   (symbol "irtool_symbols:TestPoint" (at 68.58 45.72 0) (unit 1) (in_bom no) (on_board yes)
     (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2070a")
     (property "Reference" "TP1" (at 68.58 43.18 0) (effects (font (size 1.27 1.27))))
@@ -268,7 +250,6 @@
     (pin "1" (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2075a"))
     (instances (project "remote" (path "/4a7a9960-a803-42d7-9baf-7a81f45e2001" (reference "TP5") (unit 1))))
   )
-  ;; ---- Key Switches ----
   (symbol "irtool_symbols:SW_Push" (at 203.2 50.8 0) (unit 1) (in_bom yes) (on_board yes)
     (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2090")
     (property "Reference" "SW1" (at 203.2 46.99 0) (effects (font (size 1.27 1.27))))
@@ -293,52 +274,29 @@
     (pin "2" (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2098"))
     (instances (project "remote" (path "/4a7a9960-a803-42d7-9baf-7a81f45e2001" (reference "SW3") (unit 1))))
   )
-  ;; ---- Wire: VDD_MCU hierarchical label to pin 1 ----
   (wire (pts (xy 25.4 45.72) (xy 91.44 45.72) (xy 91.44 46.99) (xy 104.14 46.99)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2080"))
-  ;; ---- Wire: GND hierarchical label to pin 8 and GND bus ----
   (wire (pts (xy 25.4 106.68) (xy 83.82 106.68) (xy 83.82 77.47) (xy 104.14 77.47)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2081"))
-  ;; GND bus wire (horizontal) for pin 8 and pin 20
   (wire (pts (xy 83.82 77.47) (xy 83.82 106.68)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2081b"))
-  ;; ---- Wire: IR_GPIO hierarchical label to pin 3 ----
   (wire (pts (xy 25.4 63.5) (xy 71.12 63.5) (xy 71.12 52.07) (xy 104.14 52.07)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2083"))
-  ;; ---- Wire: pin 3 to TP1 (SWIM) ----
   (wire (pts (xy 71.12 63.5) (xy 73.66 63.5)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2083a"))
-  ;; ---- Wire: pin 4 (NRST) to TP2 ----
   (wire (pts (xy 104.14 54.61) (xy 78.74 54.61) (xy 78.74 63.5) (xy 73.66 63.5)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2084"))
-  ;; ---- Wire: VDD_MCU to TP3 ----
   (wire (pts (xy 91.44 45.72) (xy 91.44 81.28) (xy 73.66 81.28)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2085"))
-  ;; ---- Wire: GND bus to TP4 ----
   (wire (pts (xy 83.82 106.68) (xy 73.66 106.68)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2086"))
-  ;; ---- Wires: unused left-side pins to pull-down resistors ----
-  ;; Pin 2 (PC7) at 104.14,49.53 -> RD1
   (wire (pts (xy 104.14 49.53) (xy 35.56 49.53) (xy 35.56 76.2)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2087"))
-  ;; Pin 5 (PA2) at 104.14,57.15 -> RD2
   (wire (pts (xy 104.14 57.15) (xy 33.02 57.15) (xy 33.02 86.36)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2088"))
-  ;; Pin 6 (PA3) at 104.14,59.69 -> RD3
   (wire (pts (xy 104.14 59.69) (xy 30.48 59.69) (xy 30.48 96.52)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2089"))
-  ;; Pin 7 (PB7) at 104.14,62.23 -> RD4
   (wire (pts (xy 104.14 62.23) (xy 27.94 62.23) (xy 27.94 106.68) (xy 35.56 106.68)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e208a"))
-  ;; Pull-down resistors output (pin 2) to GND
   (wire (pts (xy 45.72 76.2) (xy 83.82 76.2) (xy 83.82 77.47)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e208b"))
   (wire (pts (xy 45.72 86.36) (xy 83.82 86.36)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e208c"))
   (wire (pts (xy 45.72 96.52) (xy 83.82 96.52)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e208d"))
   (wire (pts (xy 45.72 106.68) (xy 83.82 106.68)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e208e"))
-  ;; ---- Wires: unused right-side pins (12-18) to pull-down resistors ----
-  ;; Pin 12 (PB2) at 129.54,74.93 -> RD5 pin 1
   (wire (pts (xy 129.54 74.93) (xy 154.94 74.93) (xy 154.94 68.58)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e208f"))
-  ;; Pin 13 (PB3) at 129.54,77.47 -> RD6 pin 1
   (wire (pts (xy 129.54 77.47) (xy 154.94 77.47) (xy 154.94 78.74)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2090a"))
-  ;; Pin 14 (PB4) at 129.54,80.01 -> RD7 pin 1
   (wire (pts (xy 129.54 80.01) (xy 154.94 80.01) (xy 154.94 88.9)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2090b"))
-  ;; Pin 15 (PB5) at 129.54,82.55 -> RD8 pin 1
   (wire (pts (xy 129.54 82.55) (xy 154.94 82.55) (xy 154.94 99.06)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2090c"))
-  ;; Pin 16 (PB6) at 129.54,85.09 -> RD9 pin 1
   (wire (pts (xy 129.54 85.09) (xy 154.94 85.09) (xy 154.94 109.22)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2090d"))
-  ;; Pin 17 (PC4) at 129.54,87.63 -> RD10 pin 1
   (wire (pts (xy 129.54 87.63) (xy 154.94 87.63) (xy 154.94 119.38)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2090e"))
-  ;; Pin 18 (PC5) at 129.54,90.17 -> RD11 pin 1
   (wire (pts (xy 129.54 90.17) (xy 154.94 90.17) (xy 154.94 129.54)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e2090f"))
-  ;; Right-side pull-down resistor outputs (pin 2) to GND
   (wire (pts (xy 165.1 68.58) (xy 175.26 68.58) (xy 175.26 106.68) (xy 83.82 106.68)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e20a0"))
   (wire (pts (xy 165.1 78.74) (xy 170.18 78.74) (xy 170.18 106.68)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e20a1"))
   (wire (pts (xy 165.1 88.9) (xy 167.64 88.9) (xy 167.64 106.68)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e20a2"))
@@ -346,27 +304,16 @@
   (wire (pts (xy 165.1 109.22) (xy 165.1 106.68)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e20a4"))
   (wire (pts (xy 165.1 119.38) (xy 165.1 106.68)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e20a5"))
   (wire (pts (xy 165.1 129.54) (xy 165.1 106.68)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e20a6"))
-  ;; ---- Wire: Pin 19 (PC1/DBG_STRAP) to TP5 and DBG_STRAP label ----
   (wire (pts (xy 129.54 92.71) (xy 142.24 92.71) (xy 142.24 58.42) (xy 154.94 58.42)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e20a7"))
-  ;; DBG_STRAP label wire
   (wire (pts (xy 142.24 92.71) (xy 182.88 92.71) (xy 182.88 81.28)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e20a8"))
-  ;; ---- Wires: key switches ----
-  ;; Pin 10 (PB0/KEY1_N) at 104.14,69.85 -> SW1 pin 1
   (wire (pts (xy 104.14 69.85) (xy 182.88 69.85) (xy 182.88 50.8) (xy 198.12 50.8)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e20a9"))
-  ;; Pin 11 (PB1/KEY2_N) at 129.54,72.39 -> SW2 pin 1
   (wire (pts (xy 129.54 72.39) (xy 182.88 72.39) (xy 182.88 60.96) (xy 198.12 60.96)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e20aa"))
-  ;; Pin 9 (PD0/KEY3_N) at 104.14,67.31 -> SW3 pin 1
   (wire (pts (xy 104.14 67.31) (xy 182.88 67.31) (xy 182.88 71.12) (xy 198.12 71.12)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e20ab"))
-  ;; SW pin 2 (GND side) to GND bus
   (wire (pts (xy 208.28 50.8) (xy 218.44 50.8) (xy 218.44 106.68) (xy 83.82 106.68)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e20ac"))
   (wire (pts (xy 208.28 60.96) (xy 215.9 60.96) (xy 215.9 106.68)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e20ad"))
   (wire (pts (xy 208.28 71.12) (xy 213.36 71.12) (xy 213.36 106.68)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e20ae"))
-  ;; ---- Decoupling C4 wiring ----
-  ;; C4 pin 1 (VDD_MCU) from VDD_MCU bus
   (wire (pts (xy 91.44 45.72) (xy 91.44 53.34) (xy 93.98 53.34) (xy 93.98 58.42)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e20af"))
-  ;; C4 pin 2 (GND) to GND
   (wire (pts (xy 104.14 58.42) (xy 83.82 58.42) (xy 83.82 77.47)) (stroke (width 0) (type default) (color 0 0 0 0)) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e20b0"))
-  ;; ---- Annotations ----
   (text "All 20 MCU pins connected. Unused pins (PC7/PA2/PA3/PB7/PB2-PB6/PC4/PC5) tied to GND via 100K pull-down resistors for low power." (at 27.94 30.48 0) (effects (font (size 1.27 1.27))) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e20b1"))
   (text "Active-low keys to GND; internal pull-ups and debounce handled in firmware" (at 170.18 99.06 0) (effects (font (size 1.27 1.27))) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e20b2"))
   (text "Pin map: PA0=IR_GPIO/SWIM, PB0=KEY1_N, PB1=KEY2_N, PD0=KEY3_N, PC1=DBG_STRAP" (at 27.94 35.56 0) (effects (font (size 1.27 1.27))) (uuid "4a7a9960-a803-42d7-9baf-7a81f45e20b3"))
