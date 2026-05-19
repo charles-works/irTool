@@ -1,36 +1,45 @@
-# Hardware Skeleton
+# Hardware Design
 
-This directory contains an editable KiCad-style schematic skeleton for the active default STM8L051F3P6 + IRLML2502 remote design.
-
-STM8L001 references, if encountered in older notes, are legacy/background context and are not the current hardware target.
+Complete KiCad schematic and PCB for the STM8L051F3P6 + IRLML2502 + CR2032 NEC IR remote.
 
 ## Files
-- `kicad/remote.kicad_pro` - project shell
-- `kicad/remote.kicad_sch` - root schematic opened by KiCad project preview
-- `kicad/remote.kicad_pcb` - PCB skeleton matching the first-pass schematic/BOM intent
-- `kicad/sym-lib-table` - project-local KiCad symbol library binding
-- `kicad/lib/irtool_symbols.kicad_sym` - minimal local symbol library for this first-pass design
-- `kicad/top.kicad_sch` - legacy top-level note page retained for review/reference
-- `kicad/power_ir.kicad_sch` - CR2032, decoupling, IR driver block shell
-- `kicad/mcu_keys.kicad_sch` - STM8L051F3P6 core, keys, SWIM/NRST/debug block shell
-- `schematic-structure.md` - structured schematic mapping for continued editing
+- `kicad/remote.kicad_pro` — KiCad project with design settings and net classes
+- `kicad/remote.kicad_sch` — root schematic (page 1) with hierarchical sheets and PWR_FLAG
+- `kicad/mcu_keys.kicad_sch` — MCU + keys + debug (page 2): full 20-pin U1, pull-down resistors, test points, switches
+- `kicad/power_ir.kicad_sch` — power + IR driver (page 3): CR2032, decoupling, IRLML2502 driver, R1 current limiter
+- `kicad/remote.kicad_pcb` — PCB layout with all footprints, routing, mounting holes, GND zones
+- `kicad/top.kicad_sch` — legacy note page (retained for reference)
+- `kicad/lib/irtool_symbols.kicad_sym` — project-local symbol library (U1, Q1, D1, BT1, R, C, CP, SW, TP, PWR_FLAG)
+- `schematic-structure.md` — authoritative block/net/BOM mapping
 
-## Active default connection intent
-- MCU `IR/GPIO` output -> `100 Ω` gate resistor -> IRLML2502 gate.
-- `1 MΩ` gate pull-down from IRLML2502 gate to `GND`.
-- IR LED plus `R_LED` connect from `CR2032+` to the MOSFET-controlled cathode path.
-- IRLML2502 source connects to `GND`; drain connects to the IR LED cathode return path.
-- Provide test/debug points for `SWIM`, `NRST`, `VDD`, and `GND`.
+## Active default hardware target
+- MCU: STM8L051F3P6 (TSSOP-20), all 20 pins connected
+- IR driver: IRLML2502 NMOS low-side switch with 100 Ω gate resistor and 1 MΩ gate pull-down
+- IR LED current limiting: R1 (10–22 Ω) from VDD_MCU to IR LED anode
+- Battery: CR2032 holder on back copper layer
+- Unused MCU pins: tied to GND via 11 × 100 K pull-down resistors (RD1–RD11)
+- Debug access: 5 test points (SWIM, NRST, VDD, GND, DBG) along board top edge
+- User input: 3 tactile switches (KEY1, KEY2, KEY3), active-low to GND
+- PCB: 170 × 75 mm, 2 mm corner radii, 4 × M2 mounting holes, GND zones on both layers
+- Net classes: Default (0.25 mm signal) and Power (0.5 mm for VDD_MCU, GND, IR_LED)
 
-## Scope
-- Net and block organization only
-- Includes only the necessary local symbols for this project pass; not a full library pack
-- Includes a non-production PCB skeleton for preview/edit continuation; not a completed layout
-- Not a production-ready PCB or complete library deliverable
+## Design hierarchy
+```
+remote.kicad_sch (page 1, root)
+├── mcu_keys.kicad_sch (page 2) — MCU, keys, debug, pull-downs
+└── power_ir.kicad_sch (page 3) — battery, decoupling, IR driver
+```
+
+## Key connection intent
+1. CR2032+ → VDD_MCU rail → U1 VDD, C1, C2, C3, R1
+2. PA0/IR_GPIO → 100 Ω R2 → IRLML2502 gate (R_PD 1 MΩ to GND)
+3. IRLML2502 drain → IR LED cathode (IR_LED_K)
+4. VDD_MCU → R1 (10–22 Ω) → IR LED anode (IR_LED_A)
+5. IRLML2502 source → GND
+6. PB0/PB1/PD0 → KEY1_N/KEY2_N/KEY3_N → tactile switches → GND
 
 ## Editing intent
-- Continue editing these files in KiCad or replace them with fuller KiCad content in later passes.
-- Treat the Markdown structure file as the authoritative mapping of blocks, nets, and deferred details for this first pass.
-- Use the project-local `irtool_symbols` library as the default symbol source for U1/Q1/BT1/D1/SW/TP and simple passives.
-- Open `remote.kicad_pro` / `remote.kicad_sch` as the project entry; the root sheet now references `mcu_keys.kicad_sch` and `power_ir.kicad_sch`.
-- `remote.kicad_pcb` currently includes board-outline and placement placeholders for U1/Q1/BT1/D1/R1/R2/R3/C1/C2/C3/SW1-SW3/TP1-TP5.
+- Open `remote.kicad_pro` as the project entry
+- Use `irtool_symbols` library for all project-specific symbols
+- Footprint names use `irtool:` prefix — replace with KiCad standard library footprints when finalizing
+- This is a first-pass engineering asset, not a production release
