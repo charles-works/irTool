@@ -55,7 +55,7 @@
   (net 7 "KEY3_N")
   (net 8 "IR_LED_A")
   (net 9 "IR_LED_K")
-  (net 10 "SWIM_TP")
+  (net 10 "UNUSED")
   (net 11 "NRST_TP")
   (net 12 "DBG_STRAP")
   ;; ---- Net classes ----
