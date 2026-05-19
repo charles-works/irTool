@@ -33,7 +33,7 @@ Active default: STM8L051F3P6 MCU with IRLML2502 low-side NMOS IR driver.
 - Root file: `hardware/kicad/remote.kicad_sch`
 - Child sheet 1: `hardware/kicad/mcu_keys.kicad_sch` (page 2)
 - Child sheet 2: `hardware/kicad/power_ir.kicad_sch` (page 3)
-- `hardware/kicad/top.kicad_sch` — legacy review note page (not the project root)
+- `hardware/kicad/top.kicad_sch.legacy-bak` — legacy review note page (archived, not part of active hierarchy)
 
 ## Net names
 

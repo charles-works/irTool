@@ -8,7 +8,7 @@ Complete KiCad schematic and PCB for the STM8L051F3P6 + IRLML2502 + CR2032 NEC I
 - `kicad/mcu_keys.kicad_sch` — MCU + keys + debug (page 2): full 20-pin U1, pull-down resistors, test points, switches
 - `kicad/power_ir.kicad_sch` — power + IR driver (page 3): CR2032, decoupling, IRLML2502 driver, R1 current limiter
 - `kicad/remote.kicad_pcb` — PCB layout with all footprints, routing, mounting holes, GND zones
-- `kicad/top.kicad_sch` — legacy note page (retained for reference)
+- `kicad/top.kicad_sch.legacy-bak` — legacy note page (archived, not part of active hierarchy)
 - `kicad/lib/irtool_symbols.kicad_sym` — project-local symbol library (U1, Q1, D1, BT1, R, C, CP, SW, TP, PWR_FLAG)
 - `schematic-structure.md` — authoritative block/net/BOM mapping
 
